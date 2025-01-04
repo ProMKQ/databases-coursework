@@ -12,7 +12,7 @@
     "docs:clean-dev": "vuepress-vite dev docs --clean-cache",
     "docs:dev": "vuepress-vite dev docs",
     "docs:update-package": "npx vp-update",
-    "docs:deploy": "gh-pages -d build"
+    "docs:deploy": "gh-pages -d docs/.vuepress"
   },
   "devDependencies": {
     "@types/node": "^22.10.5",
