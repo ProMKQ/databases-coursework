@@ -1,6 +1,7 @@
 {
   "name": "databases-coursework",
   "version": "2.0.0",
+  "homepage": "https://promkq.github.io/databases-coursework/",
   "description": "В цьому репозиторії знаходиться шаблон для виконання курсової роботи.",
   "license": "ECL 2.0",
   "prisma": {
@@ -10,12 +11,14 @@
     "docs:build": "vuepress-vite build docs",
     "docs:clean-dev": "vuepress-vite dev docs --clean-cache",
     "docs:dev": "vuepress-vite dev docs",
-    "docs:update-package": "npx vp-update"
+    "docs:update-package": "npx vp-update",
+    "docs:deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "@types/node": "^22.10.5",
     "@vuepress/bundler-vite": "^2.0.0-rc.14",
     "prisma": "^6.1.0",
+    "sass-embedded": "^1.83.1",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "vue": "^3.5.8",
@@ -24,6 +27,7 @@
   },
   "dependencies": {
     "@prisma/client": "^6.1.0",
+    "gh-pages": "^6.3.0",
     "markdown-it-plantuml": "^1.4.1"
   },
   "main": "index.js",
