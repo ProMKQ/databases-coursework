@@ -68,7 +68,7 @@ CREATE TABLE `assignment` (
     );
 
 -- CreateTable
-CREATE TABLE `suport_request` (
+CREATE TABLE `support_request` (
     `id` VARCHAR(191) NOT NULL,
     `user_id` INTEGER NOT NULL,
     `topic` VARCHAR(255) NOT NULL,
@@ -159,8 +159,8 @@ ALTER TABLE `assignment`
     REFERENCES `project_member`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE `suport_request`
-    ADD CONSTRAINT `suport_request_user_id_fkey`
+ALTER TABLE `support_request`
+    ADD CONSTRAINT `support_request_user_id_fkey`
     FOREIGN KEY (`user_id`)
     REFERENCES `user`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
 
@@ -168,7 +168,7 @@ ALTER TABLE `suport_request`
 ALTER TABLE `support_request_answer`
     ADD CONSTRAINT `support_request_answer_support_request_id_fkey`
     FOREIGN KEY (`support_request_id`)
-    REFERENCES `suport_request`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+    REFERENCES `support_request`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE `connect_to_project_request`
@@ -283,7 +283,7 @@ INSERT INTO `project_member_role` VALUES
     ('ef17e2ce-9c9b-47a8-badc-4231e7c5c51c','9a108f4a-38ea-422c-8f51-3bbe9acc62ae','0917dc05-f777-44e0-8c2e-699f69afe37e');
 
 
-INSERT INTO `suport_request` VALUES
+INSERT INTO `support_request` VALUES
     ('4fbe4541-9235-4e80-a9c9-9fd1d3117267','ac271f82-76f6-4cde-be0b-5d22c05ef026','accelerator','Inventore vapulus beatus tertius sono cerno. Titulus alienus coaegresco velit cunctatio corrumpo. Ulterius amoveo vaco adfero cribro torrens.'),
     ('5deddba6-2073-494b-af56-9a14f3847888','ed8b1607-6901-45f7-837c-51a5d838559c','coil','Umbra vesica arbor turbo centum cubitum caput mollitia spero. Vel via delibero autem decimus denuo. Taedium aggero sumptus commodo usque tabella.'),
     ('dfbf873b-de0d-493f-87dc-4ef53ecfd7ce','01aac9a4-9fa0-4259-9cb7-96ae04493c00','stock','Exercitationem asper repellendus curo cursim. Subnecto aeger vae acidus beneficium. Vae aut quod.');
