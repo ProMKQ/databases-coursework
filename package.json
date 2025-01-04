@@ -3,7 +3,9 @@
   "version": "2.0.0",
   "description": "В цьому репозиторії знаходиться шаблон для виконання курсової роботи.",
   "license": "ECL 2.0",
-  "type": "module",
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
   "scripts": {
     "docs:build": "vuepress-vite build docs",
     "docs:clean-dev": "vuepress-vite dev docs --clean-cache",
